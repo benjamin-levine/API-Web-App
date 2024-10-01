@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>API Test</title>
+</head>
+<body>
+
+    <h1>Random Facts</h1>
+    <p></p>
+
+    <div class="container">
+        <form action="/randFact" id="form" class="form" method="POST">
+            <button type="submit" class="form-submit">See Random Fact</button>
+          
+            <!-- 
+            <select name="language" id="language">
+                <option value="en">English</option>  api says german and english work
+                <option value-"de">German</option>   but even when german was chosen
+                                                     fact would be in english
+            </select>
+            -->
+
+        </form>
+    
+        <form action="/todayFact" id="form2" class="form2" method="POST">
+            <button type = "submit" class="form-submit2">See Today's Fact</button>
+
+        </form>
+
+        <% if (randomFact) { %>
+            <div class="fact">
+                <p><%= randomFact.text %></p> 
+            </div>
+        <% } %>
+
+        <% if (dailyFact) { %>
+            <div class="fact2">
+                <p><%= dailyFact.text %></p>
+            </div>
+        <% } %>
+
+
+    </div>
+    
+</body>
+
+</html>
